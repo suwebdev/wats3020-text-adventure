@@ -25,9 +25,19 @@ let currentPage = null;
 
 
 // TODO: Create a function called `undoChoice()` that will remove the last
-// `slug` in the `choiceList` Array and then will return a `page` object from
-// `storyData` to the calling code.
+// `slug` in the `choiceList` Array and then will return the last `slug` in the
+// `choiceList` Array.
 
+
+
+// TODO: Create a function called `changePage()` that accepts a parameter called
+// `slug` and which handles "turning the page" in three steps:
+//  1. It should call the `recordChoice()` function (and give it the `slug` as
+//     a parameter.
+//  2. It should set the `currentPage` value by calling the `getCurrentPage()`
+//     function (and give it the `slug` as a parameter).
+//  3. It should invoke the `updatePage()` function (and give it the
+//     `currentPage` object as a parameter).
 
 
 
@@ -234,10 +244,7 @@ function addEventListeners(){
     for (choice of choices){
         choice.addEventListener('click', function(e){
             console.log(`Moving to page: ${e.target.dataset.slug}`);
-            recordChoice(e.target.dataset.slug);
-            currentPage = getCurrentPage(e.target.dataset.slug);
-            updatePage(currentPage);
-
+            changePage(e.target.dataset.slug);
         })
     }
 }
@@ -245,8 +252,8 @@ function addEventListeners(){
 let undo = document.querySelector('#undo');
 undo.addEventListener('click', function(e){
     console.log('Undoing last choice.');
-    currentPage = undoChoice();
-    updatePage(currentPage);
+    let slug = undoChoice();
+    updatePage(slug);
 })
 
 currentPage = storyData.p1;
