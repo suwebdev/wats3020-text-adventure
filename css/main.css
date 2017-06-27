@@ -1,0 +1,50 @@
+/* Styles for WATS 3020 Text Adventure */
+
+#story-text {
+    font-weight: 300;
+    font-size: 1.2rem;
+}
+button#undo {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+button#undo:hover {
+    border: none;
+    background: #333;
+    color: #fff;
+}
+#choices {
+    list-style-type: none;
+    text-align: center;
+    padding-left: 0;
+    white-space: nowrap;
+}
+#choices li {
+    white-space: normal;
+    padding: 0.5rem;
+    background: #e8e8e8;
+    font-size: 0.9rem;
+    cursor: pointer;
+    margin: 1rem 0;
+}
+#choices li:hover {
+    background: #333;
+    color: #fff;
+}
+
+h1, h2 {
+    font-family: Georgia, "Times New Roman", serif;
+}
+body {
+    width: 80%;
+    margin: 1rem auto;
+    padding: 3rem 2rem;
+    background: #fafafa;
+    color: #666;
+    font-family: Helvetica, Arial, sans-serif;
+    border: 4px double #666;
+}
+html {
+    background: #e8e8e8 url('../images/vertical-waves.png') repeat;
+}
