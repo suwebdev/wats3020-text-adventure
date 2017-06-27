@@ -15,7 +15,7 @@ let currentPage = null;
 
 // TODO: Create a function called `getCurrentPage()`. It should accept one
 // parameter, which is the `slug` for the current page. This function will fetch
-// the current page and return a page object using he `slug` value for a key.
+// the current page and return a page object using the `slug` value for a key.
 
 
 
@@ -253,7 +253,8 @@ let undo = document.querySelector('#undo');
 undo.addEventListener('click', function(e){
     console.log('Undoing last choice.');
     let slug = undoChoice();
-    updatePage(slug);
+    currentPage = getCurrentPage(slug);
+    updatePage(currentPage);
 })
 
 currentPage = storyData.p1;
