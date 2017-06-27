@@ -11,15 +11,24 @@ let currentPage = null;
 
 // TODO: Prompt the user for their name. Store the name in the variable `playerName`.
 
+
+
 // TODO: Create a function called `getCurrentPage()`. It should accept one
 // parameter, which is the `slug` for the current page. This function will fetch
-// the current page and return a page object.
+// the current page and return a page object using he `slug` value for a key.
+
+
 
 // TODO: Create a function called `recordChoice()` that will accept a `slug`
-// parameter and store it in the `choiceList` Array.
+// parameter and add it to the `choiceList` Array (probably using `push()`).
+
+
 
 // TODO: Create a function called `undoChoice()` that will remove the last
-// `slug` in the `choiceList` Array and will return a page object.
+// `slug` in the `choiceList` Array and then will return a `page` object from
+// `storyData` to the calling code.
+
+
 
 
 ///////////////////////////////////////////////////
@@ -217,6 +226,7 @@ function updatePage(page) {
         newLI.setAttribute('data-slug', choice.link);
         choicesUL.appendChild(newLI);
     }
+    addEventListeners();
 }
 
 function addEventListeners(){
@@ -227,7 +237,7 @@ function addEventListeners(){
             recordChoice(e.target.dataset.slug);
             currentPage = getCurrentPage(e.target.dataset.slug);
             updatePage(currentPage);
-            addEventListeners();
+
         })
     }
 }
@@ -235,8 +245,7 @@ function addEventListeners(){
 let undo = document.querySelector('#undo');
 undo.addEventListener('click', function(e){
     console.log('Undoing last choice.');
-    undoLastChoice();
-    currentPage = getCurrentPage(choiceList[choiceList.length - 1]);
+    currentPage = undoChoice();
     updatePage(currentPage);
 })
 

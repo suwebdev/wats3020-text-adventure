@@ -30,5 +30,8 @@ requirements:
 If this project is too easy, attempt these stretch goals to make it more
 challenging.
 
+
 * Enhance the project with an original story, or a more ambitious story, or one that explores allowing for more than two choices. (You might consult some resources like ["How to Write Your Own Choose Your Own Adventure Story"](http://blog.karenwoodward.org/2014/06/how-to-write-choose-your-own-adventure.html) by Karen Woodward, or ["Designing Branching Narratives"](https://thestoryelement.wordpress.com/2015/02/11/designing-branching-narrative/) by Paul Nelson.)
 * In your new story you could add additional characters that the User could name. Write functions to prompt the user for those names and then manage their insertion into the text in appropriate places.
+* **ADVANCED:** Log the time started so that you can provide a "total time played" update on each page (you will need to edit the `updatePage()` function to add this output). (Look into the JS [`Date` object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) to make that happen.)
+* **ADVANCED:** Enhance the `storyData` object to use a property called `timeLimit` on pages: If there is a `timeLimit` for a page, then edit the `updatePage()` function to use a `setTimeout` command that will send the user to a failure page if they don't make a choice within the allotted time.
