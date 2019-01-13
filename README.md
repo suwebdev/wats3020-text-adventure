@@ -30,6 +30,7 @@ requirements:
 If this project is too easy, attempt these stretch goals to make it more
 challenging.
 
+* Add a link to some image data and display that when you're on the page associated with that image
 * Enhance the undo mechanism by initializing it with the slug for `"p1"` (the first page of the story).
 * Enhance the undo mechanism by making it reset when the user restarts the story or reaches the end. (This may require you to determine that fact in the `getCurrentPage()` function and then create a new function to reset the `choiceList`.)
 * Enhance the project with an original story, or a more ambitious story, or one that explores allowing for more than two choices. (You might consult some resources like ["How to Write Your Own Choose Your Own Adventure Story"](http://blog.karenwoodward.org/2014/06/how-to-write-choose-your-own-adventure.html) by Karen Woodward, or ["Designing Branching Narratives"](https://thestoryelement.wordpress.com/2015/02/11/designing-branching-narrative/) by Paul Nelson.)
