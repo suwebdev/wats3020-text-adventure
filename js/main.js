@@ -1,6 +1,5 @@
 /* JS for WATS 3020 Text Adventure */
-let playerName = "";
-let choiceList = [];
+let choiceList = ['p1'];
 let currentPage = null;
 
 ///////////////////////////////////////////////////
@@ -8,10 +7,6 @@ let currentPage = null;
 ////////////////////////////////////////////////////////////////////////////////
 // Fill in the blanks below to complete each TODO task.                       //
 ////////////////////////////////////////////////////////////////////////////////
-
-// TODO: Prompt the user for their name. Store the name in the variable `playerName`.
-
-
 
 // TODO: Create a function called `getCurrentPage()`. It should accept one
 // parameter, which is the `slug` for the current page. This function will fetch
@@ -27,6 +22,23 @@ let currentPage = null;
 // TODO: Create a function called `undoChoice()` that will remove the last
 // `slug` in the `choiceList` Array and then will return the last `slug` in the
 // `choiceList` Array.
+
+
+
+// TODO: Create two variables: pageContent and choicesUL. Use a DOM selector
+// method (such as querySelector or getElementByID) to set the variable 
+// pageContent to the <p> element with the ID of 'story-text' and set the
+// variable choicesUL to the <ul> element with the ID 'choices'.
+
+// TODO: Create a function called `updatePage()` that accepts a `page` parameter
+// and handles displaying the page in three steps:
+//  1. It should set the text of the pageContent equal to page.text (the text of
+//     the page).
+//  2. For each item in the array page.choices, it should create a new <li>
+//     element with the text of page.choices[i].text. In addition, the <li>
+//     element should have an attribute called 'data-slug' set to
+//     page.choices[i].link.
+//  3. At the end of the function, call the function addEventListeners().
 
 
 
@@ -59,7 +71,7 @@ let currentPage = null;
 var storyData = {
     title: "The Crow and the Fox",
     p1: {
-        text: `You are a crow named ${playerName}. You are flying high above the
+        text: `You are a crow. You are flying high above the
                 countryside. You see a farm off to the West, and your home forest
                 off to the East.`,
         choices: [
@@ -170,7 +182,7 @@ var storyData = {
         ]
     },
     p6 : {
-        text: `Mr. Fox approaches and says, "Hello ${playerName}! It's been so
+        text: `Mr. Fox approaches and says, "Hello crow! It's been so
                 long since we've seen each other. I've missed hearing your
                 lovely singing voice. Won't you sing me a tune before I go?`,
         choices: [
@@ -224,20 +236,6 @@ var storyData = {
 let title = document.querySelector('#story-title');
 title.innerHTML = storyData.title;
 
-let pageContent = document.querySelector('#story-text');
-let choicesUL = document.querySelector('#choices');
-
-function updatePage(page) {
-    pageContent.innerHTML = page.text;
-    choicesUL.innerHTML = '';
-    for (choice of page.choices){
-        let newLI = document.createElement('li');
-        newLI.innerHTML = choice.text;
-        newLI.setAttribute('data-slug', choice.link);
-        choicesUL.appendChild(newLI);
-    }
-    addEventListeners();
-}
 
 function addEventListeners(){
     let choices = document.querySelectorAll('#choices li');
