@@ -24,11 +24,11 @@ requirements:
 5. Add a function that advances to the next page.
 
 ## Guide and Tutorial
-For assistance with specific components of this assignment, consult this [text tutorial](./tutorials.md) for guidance. In the alternative, a video walkthrough of the assignment can be found [here](./README.md). Timestamps for specific parts of the assignment (with associated links) are as follows:
-* 1:00
-* 2:00
-* 3:00
-* 4:00
+For assistance with specific components of this assignment, consult this [text tutorial](./tutorials.md) for guidance. In the alternative, a video walkthrough of the assignment can be found [here](https://youtu.be/wrJMhsQOfZQ). Timestamps for specific parts of the assignment (with associated links) are as follows:
+* [3:20 - Overview of the Story Data](https://youtu.be/wrJMhsQOfZQ?t=200)
+* [7:15 - Updating the Page Content](https://youtu.be/wrJMhsQOfZQ?t=435)
+* [17:07 - Loading a New Page](https://youtu.be/wrJMhsQOfZQ?t=1027)
+* [23:07 - Finishing the Undo Button](https://youtu.be/wrJMhsQOfZQ?t=1387)
 
 ## Stretch Goals
 If this project is too easy, attempt these stretch goals to make it more
